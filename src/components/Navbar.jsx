@@ -1,28 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Hamburber from './Hamburber';
 import Link from 'next/link';
+import { FaHome, FaProductHunt, FaList, FaInfoCircle } from 'react-icons/fa';
+import { useRouter } from 'next/router';
+import style from './style.module.css';
 
 export const navigation = [
-  { href: '/', label: 'Home' },
-  { href: '/product', label: 'Product' },
-  { href: '/categories', label: 'Categories' },
-  { href: '/about', label: 'About' },
+  { href: '/', label: 'Home', icon: FaHome },
+  { href: '/product', label: 'Product', icon: FaProductHunt },
+  { href: '/categories', label: 'Categories', icon: FaList },
+  { href: '/about', label: 'About', icon: FaInfoCircle },
 ];
 
 export default function Navbar() {
+  const router = useRouter();
 
   return (
-    <div className='bg-white py-4 px-6'>
+    <div className='bg-gray-100 py-4 px-3 relative'>
       <div className='flex justify-between px-9 items-center text-center'>
-        <h2 className='font-bold'>Meggie Appeal</h2>
-        
+        <h2 className='font-bold'>
+          Meggie <span className='text-green-500'>Appeal</span>
+        </h2>
+
         <div className='hidden md:block sm:block'>
           <ul className='space-x-10 flex justify-center items-center'>
-          {navigation.map((link, index) => (
-            <li key={index}>
-              <Link href={link.href}>{link.label}</Link>
-            </li>
-          ))}
+            {navigation.map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.href}
+                  className={`hover:text-green-500 hover:font-medium duration-200 font-semibold text-[13px] flex justify-center items-center space-x-1 pb-1 ${
+                    router.pathname === link.href ? style['active-link'] : ''
+                  }`}
+                >
+                  <div>{link.icon && React.createElement(link.icon)}</div>
+                  <div>{link.label}</div>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -30,7 +44,6 @@ export default function Navbar() {
           <Hamburber />
         </div>
       </div>
-      {/* <div className={change}></div> */}
     </div>
   );
 }

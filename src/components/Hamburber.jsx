@@ -9,15 +9,23 @@ const [Change, setChange] = useState(false)
 const handleClick = ()=> {
     setChange(!Change)
 }
+
+const handLinkClose = () => {
+  setChange(false)
+}
   return (
     <div>
     <div onClick={handleClick} className='cursor-pointer'>
         {Change ? <GrClose size={25} /> : <RxHamburgerMenu size={25}/> }
     </div>
-    <div className={Change ? 'fixed left-0 w-[65%] h-screen bg-[#ecf0f3] p-10 ease-in sm:hidden duration-500 rounded-sm' : 'fixed w-[65%] h-screen bg-[#ecf0f3] p-10 rounded-sm ease-in duration-500 left-[-100%]'}>
+    <div className={Change ? 'mt-3 fixed left-0 w-[50%] h-screen bg-[#ecf0f3] p-10 ease-in sm:hidden duration-500 rounded-sm' : 'fixed w-[65%] h-screen bg-[#ecf0f3] p-10 rounded-sm ease-in duration-500 left-[-100%]'}>
     {navigation.map((link, index) => (
             <section key={index}>
-              <Link href={link.href}>{link.label}</Link>
+              <div className=' '>
+              <Link href={link.href} className='flex mt-5 hover:text-green-500 hover:font-medium duration-200 font-semibold text-[16px] items-center space-x-1' onClick={handLinkClose}>
+              <div className='text-left'>{link.icon && React.createElement(link.icon)}</div><div>{link.label}</div>
+              </Link>
+              </div>
             </section>
           ))}
     </div>
