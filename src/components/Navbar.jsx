@@ -16,9 +16,9 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <div className='bg-gray-100 py-4 px-3 relative'>
-      <div className='flex justify-between px-9 items-center text-center'>
-        <h2 className='font-bold'>
+    <div className='bg-gray-100 py-4 px-2 relative'>
+      <div className='flex justify-between px-4 items-center text-center'>
+        <h2 className={`font- text-[30px] ${style.head}`}>
           Meggie <span className='text-green-500'>Appeal</span>
         </h2>
 
