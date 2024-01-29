@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './style.module.css'
+import Display from './Display'
 
 export default function NewArrival() {
   return (
@@ -10,6 +11,7 @@ export default function NewArrival() {
             <p className='font-normal'>Here is now our newest arrival and happy shopping</p>
             </div>
         </div>
+        <Display />
     </div>
   )
 }
