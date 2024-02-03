@@ -24,7 +24,59 @@ export const file = [
         'preAmount' : '23,500',
         'discount' : 4,
     },
-    
+    {
+        'image' : '/simple1.png',
+        'price' : '16,000',
+        'name' : 'Men White Jogger',
+        'preAmount' : '20,000',
+        'discount' : 4,
+    },
+    {
+        'image' : '/simple2.png',
+        'price' : '17,000',
+        'name' : 'Men White Jogger',
+    },
+    {
+        'image' : '/simple3.png',
+        'price' : '17,500',
+        'name' : 'Men White Jogger',
+    },
+    {
+        'image' : '/simple4.png',
+        'price' : '20,500',
+        'name' : 'Men White Jogger',
+        'preAmount' : '23,500',
+        'discount' : 3,
+    },
+    {
+        'image' : '/Bignative1.png',
+        'price' : '20,500',
+        'name' : 'Men White Jogger',
+        'preAmount' : '23,500',
+        'discount' : 3,
+    },
+    {
+        'image' : '/Bignative2.png',
+        'price' : '20,500',
+        'name' : 'Men White Jogger',
+        'preAmount' : '23,500',
+        'discount' : 3,
+    },
+    {
+        'image' : '/Bignative3.png',
+        'price' : '20,500',
+        'name' : 'Men White Jogger',
+        'preAmount' : '23,500',
+        'discount' : 3,
+    },
+    {
+        'image' : '/Bignative4.png',
+        'price' : '20,500',
+        'name' : 'Men White Jogger',
+        'preAmount' : '23,500',
+        'discount' : 3,
+    },
+
 ]
 export default function File() {
   return (
