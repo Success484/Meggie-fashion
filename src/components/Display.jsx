@@ -15,7 +15,7 @@ export default function Display() {
                 <div className='text-[14px]'>
                     <div className='absolute top-0 left-0 bg-green-700 px-2.5 mt-5 ml-4'><h2 className='text-white font-medium'>New</h2></div>
                     {file.discount && (
-                        <div className='absolute top-0 left-0 bg-orange-600 px-2.5 mt-[50px] ml-4'><h2 className='text-white font-medium'>&#8722;{file.discount} &#x25;</h2></div>
+                        <div className='absolute top-0 left-0 bg-orange-600 px-2.5 mt-[50px] ml-4'><h2 className='text-white font-medium'>&#8722;{file.discount}</h2></div>
                     )}
                 </div>
             </div>
@@ -24,7 +24,9 @@ export default function Display() {
                 <StarsRate />
                 <div className='flex space-x-2 mb-3'>
                     <p className='font-bold text-gray-700 text-[15px]'>&#8358;{file.price}</p>
+                    {file.preAmount && (
                     <p className='text-gray-500 text-[15px] line-through'>&#8358;{file.preAmount}</p>
+                    )}
                 </div>
             </div>
             </div>
