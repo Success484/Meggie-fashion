@@ -9,7 +9,7 @@ export const file = [
         'image' : '/cottonPpant2.png',
         'price' : '13,000',
         'name' : 'Women Jogger',
-        'preAmount' : '16,900',
+        'preAmount' : '16,800',
         'discount' : 2,
     },
     {
