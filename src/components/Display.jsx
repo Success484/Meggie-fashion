@@ -33,7 +33,7 @@ export default function Display() {
         </section>
     ))
   return (
-    <div className='px-10 flex justify-center items-center'>
+    <div className='px-10 flex justify-center items-center pb-20'>
         <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mx-2 gap-5'>
             {display}
         </div>
